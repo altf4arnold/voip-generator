@@ -1,0 +1,72 @@
+proxy1_address: "<fqdn/hostname of ippbx>"
+
+line1_name: "<login>"
+line1_shortname: "<line_name>"
+line1_displayname: "<line_name>"
+line1_authname: "<login>"
+line1_password: "<password>"
+
+#line2_name: "<login>"
+#line2_shortname: "<login_name>"
+#line2_displayname: "<login_name>"
+#line2_authname: "<login>"
+#line2_password: "<password>"
+
+proxy_emergency: ""
+proxy_emergency_port: "5060"
+proxy_backup: ""
+proxy_backup_port: "5060"
+outbound_proxy: "<fqdn/hostname of ippbx>"
+outbound_proxy_port: "5060"
+
+proxy_register: "1"
+timer_register_expires: "120"
+preferred_codec: "none"
+tos_media: "5"
+enable_vad: "0"
+dial_template: "dialplan"
+network_media_type: "auto"
+autocomplete: "1"
+telnet_level: "2”
+
+cnf_join_enable: "1"
+semi_attended_transfer: "0"
+call_waiting: "1"
+anonymous_call_block: "0"
+callerid_blocking: "0"
+dnd_control: "0"
+
+dtmf_inband: "1"
+dtmf_outofband: "avt"
+dtmf_db_level: "3"
+dtmf_avt_payload: "101"
+timer_t1: "500"
+timer_t2: "4000"
+sip_retx: "10"
+sip_invite_retx: "6"
+timer_invite_expires: "180"
+
+
+nat_enable: "0"
+#voip_control_port: "5060"
+#start_media_port: "10000"
+#end_media_port:  "10100"
+nat_received_processing: "0"
+
+phone_label: "<upper_right_label>"
+time_zone: CET
+time_format_24hr: 3
+date_format: D/M/Y
+sntp_mode: "directedbroadcast"
+sntp_server: "<ntp_server>"
+
+logo_url: "<logurl>"
+
+telnet_level: "2"
+phone_prompt: "Cisco79x0”
+phone_password: "cisco"
+enable_vad: "0"
+network_media_type: "auto"
+user_info: phone
+image_version: "P0S3-8-12-00"
+
