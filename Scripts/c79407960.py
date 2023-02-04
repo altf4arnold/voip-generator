@@ -24,7 +24,10 @@ def getntp():
     geting the NTP server. Getting FQDN or IP address
     :return: the NTP server
     """
-    return (input("NTP server : "))
+    while True:
+        ntpserver = input("NTP server : ")
+        if ntpserver != "":
+            return ntpserver
 
 def gettimezone():
     """
@@ -103,7 +106,53 @@ def gettimezone():
 
     return timezone
 
+def getsoftwareversion():
+    """
+    getting the software version for the phones. Needed for intial flashing (still need to document)
+    :return: a string that contains software version.
+    """
+    while True:
+        software = input("What is the software version : ")
+        if software != "":
+            return software
+
+def getphonename():
+    """
+    What name would you like your phone to have (name will be shown in the upper right corner
+    :return: Phone name
+    """
+    while True:
+        name = input("What is the phone name? (name will be shown in the upper right corner" : )
+        if name != "":
+            return name
+
+def getproxy():
+    """
+    This function takes the address of the PBX
+    :return: IP address or hostname in a string (MANDATORY)
+    """
+    while True:
+        proxy = input("Enter the Hostname or IP address of the IP-PBX (proxy) : ")
+        if proxy != "":
+            return proxy
+
+
 def main():
+    username=[]
+    password=[]
     mac_address = mac()
     ntp_server = getntp()
     timezone = gettimezone()
+    software_version = getsoftwareversion()
+    phonename = getphonename()
+    proxy = getproxy()
+    lineamount = getlineamount()
+    for i in lineamount:
+        username[i] = getusername()
+        password[i] = getpassword()
+        linename[i] = getlinename()
+
+    if input("Do you have a custom logo link? (y/n) : ") == "y":
+        logourl = getlogourl()
+
+    generatefile(ntp_server,timezone,software_version,phonename,proxy,lineamount,logourl)
