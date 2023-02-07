@@ -137,21 +137,52 @@ def getproxy():
             return proxy
 
 def getlineamount():
+    """
+    Function will allow to run in a loop to get the data for all lines
+    :return:
+    """
     return int(input("How many phone lines do you have : "))
 
 def getusername():
+    """
+    can run undefined amount of times. Get's username
+    :return:
+    """
     return input("What is the line username : ")
 
 def getpassword():
+    """
+    can run undefined amount of times. Get's password
+    :return:
+    """
     return input("What is the line password : ")
 
 def getlinename():
+    """
+    can run undefined amount of times. Get's line name
+    :return:
+    """
     return input("line name : ")
 
 def getlogourl():
+    """
+    Logo URL for the PNG URL
+    :return:
+    """
     return input("Logo URL : ")
 
 def generatefile(ntp_server,timezone,software_version,phonename,proxy,lineamount,logourl):
+    """
+    Takes all the data and generates the final file
+    :param ntp_server:
+    :param timezone:
+    :param software_version:
+    :param phonename:
+    :param proxy:
+    :param lineamount:
+    :param logourl:
+    :return:
+    """
     return True
 
 def main():
