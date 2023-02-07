@@ -122,7 +122,7 @@ def getphonename():
     :return: Phone name
     """
     while True:
-        name = input("What is the phone name? (name will be shown in the upper right corner" : )
+        name = input("What is the phone name? (name will be shown in the upper right corner : ")
         if name != "":
             return name
 
@@ -136,10 +136,28 @@ def getproxy():
         if proxy != "":
             return proxy
 
+def getlineamount():
+    return int(input("How many phone lines do you have : "))
+
+def getusername():
+    return input("What is the line username : ")
+
+def getpassword():
+    return input("What is the line password : ")
+
+def getlinename():
+    return input("line name : ")
+
+def getlogourl():
+    return input("Logo URL : ")
+
+def generatefile(ntp_server,timezone,software_version,phonename,proxy,lineamount,logourl):
+    return True
 
 def main():
     username=[]
     password=[]
+    linename=[]
     mac_address = mac()
     ntp_server = getntp()
     timezone = gettimezone()
